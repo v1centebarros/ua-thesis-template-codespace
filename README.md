@@ -1,277 +1,152 @@
-<div align="center">
+# University of Aveiro Thesis Template
 
-# The WebLatex
+A thesis LaTeX template that complies with the University of Aveiro's
+guidelines and provides a simple CLI workflow around `make` that was developed
+and tested for cross-compatibility on Linux (Slackware, ArchLinux, Debian, Ubuntu) and macOS.
 
-![image](https://user-images.githubusercontent.com/54777542/224550592-657a2f4e-bd46-4f11-85af-e9b299650434.jpg)
+This template was developed by professors and students. 
+We will try to keep up to date with thesis requirements but some discrepancies may exist.
+Feel free to open issues and pull requests with new options, packages and fixes.
 
-[![GitHub license](https://img.shields.io/github/license/sanjib-sen/WebLaTex?style=for-the-badge)](https://github.com/sanjib-sen/WebLaTex/blob/main/LICENSE) [![GitHub forks](https://img.shields.io/github/forks/sanjib-sen/WebLaTex?color=orange&label=Forked%20%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB&style=for-the-badge)](https://github.com/sanjib-sen/WebLaTex/network) [![GitHub stars](https://img.shields.io/github/stars/sanjib-sen/WebLaTex?color=red&label=Loved%20%F0%9F%92%96&style=for-the-badge)](https://github.com/sanjib-sen/WebLaTex/stargazers)
+## Usage
 
-<a href="https://www.producthunt.com/posts/weblatex?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-weblatex" target="_blank" rel="noreferrer noopener"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=383518&theme=dark" alt="WebLaTeX - A&#0032;LaTeX&#0032;editor&#0032;with&#0032;Git&#0044;&#0032;VSCode&#0044;&#0032;Copilot&#0044;&#0032;Grammarly&#0032;and&#0032;more | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-  
-> A complete alternative for Overleaf with VSCode + Web + Git Integration + GitHub Copilot + Grammarly/LanguageTool + Live Collaboration Support
+Optional: In debian and ubuntu you can install all dependencies automatically:
 
-<a href="https://github.com/sanjib-sen/weblatex/generate" target="_blank" rel="noreferrer noopener"> ![get-started](https://user-images.githubusercontent.com/54777542/224549654-6f2dc0ad-54e0-4827-b316-ebe264dbf007.svg)</a>
-
-</div>
-
-> I am so glad to share that, the project has been recognized globally and many people are using this tool to create their journals, research paper, and personal resume. Students, Lecturers, and Professors from universities like the University of Minnesota, University of Colorado, University of Utah, Cornell University, and even MIT Plasma Science and Fusion Center are using this tool for creating documents. A few of you personally thanked me for this project and wished to contribute in the future, which honestly I did not expect myself! Thank you again, for the limitless support!
-
-- [The WebLatex](#the-weblatex)
-  - [Preview](#preview)
-  - [Why](#why)
-    - [Just use overleaf](#just-use-overleaf)
-  - [Whats New](#whats-new)
-  - [Installation Instructions](#installation-instructions)
-  - [Where is my PDF?](#where-is-my-pdf)
-  - [Editor Instructions](#editor-instructions)
-  - [To use with LuaLatex or any other Tex program](#to-use-with-lualatex-or-any-other-tex-program)
-  - [GitHub Copilot](#github-copilot)
-  - [Grammarly](#grammarly)
-  - [LanguageTools](#languagetools)
-  - [Live Collaboration](#live-collaboration)
-  - [PDF Viewer Dark Mode](#pdf-viewer-dark-mode)
-  - [Configuration](#configuration)
-  - [More Features and Configurations](#more-features-and-configurations)
-  - [Contribution](#contribution)
-  - [Credits](#credits)
-  - [What's Next](#whats-next)
-  - [Contact](#contact)
-
-## Preview
-
-[Video Preview](https://user-images.githubusercontent.com/54777542/224549577-1c5e0b5f-c544-4fdf-a79e-25655483e2da.mp4)
-
-## Star History
-
-<a href="https://star-history.com/#sanjib-sen/weblatex&Date">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=sanjib-sen/weblatex&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=sanjib-sen/weblatex&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=sanjib-sen/weblatex&type=Date" />
-  </picture>
-</a>
-
-## Why
-
-Do you use latex as your Resume builder / Research Project / Documentation / Article or any Documentation? Then you probably sometimes wondered in your life if you could use the advantages of git. You could just commit your changes and roll back to older versions anytime you like. When writing a journal, you suddenly remembered you need the section that you deleted earlier. What will you do?
-
-Hasn't it occurred to you that if only you could use your favorite editor VSCode to write your documents? With all the settings you configured, themes you liked and the extensions you probably prefer over your toxic girlfriend?
-
-Think of a moment, your thesis supervisor and co-supervisor wanted to make some changes to your document. What you will do? Email them your document and tell them to reply with the updated version? This is no 80's.
-
-Or, you are in your car, away from your Laptop / Desktop. Suddenly remember you forgot to change the title of your document from "Loren Ipsum" to your actual document title. Won't it be great to modify your document On the Go with your phone? Or in a nerdy way, Apple Watch?
-
-What if you could format your latex codes, automatically, after each save?
-
-And most importantly, what if you could use [GitHub Copilot](https://github.com/features/copilot) to automatically complete your latex commands and sentences? Forget the command for a thing? No worry, this tool will guess what could be the next command and will suggest that to you in each step. Not only it complete and suggest commands, but also the full sentence, and Paragraphs! Can you imaging how powerful you can be with this tool?
-
-And do I need to tell you about the usefulness of [Grammarly](https://www.grammarly.com/) for built in grammar and spelling checker? Or [LanguageTool](https://languagetool.org)? if you prefer open-source?
-
-**Yes! You can do all of these things now with Git, GitHub, Full VSCode Integration, Grammarly, Live Collaboration and Web Support - The WebLatex.**
-
-### Just use overleaf
-
-Yes, but
-
-- In overleaf, you have to pay 40$ to get the git feature which isn't even have the best or full git experience.
-- Pay 40$ to collaborate with more than 1 person
-- No VSCode, Code formatting, Grammarly, Or Dark Mode / Customization
-- GitHub Copilot: Clippy, but a lot better!
-
-## Whats New
-
-- [GitHub Copilot](#github-copilot)
-- Added support for the up-to-date texlive-full package. Now, You can stop worrying about package support.
-
-## Installation Instructions
-
-<a href="https://github.com/sanjib-sen/weblatex/generate" target="_blank"> ![get-started](https://user-images.githubusercontent.com/54777542/224549654-6f2dc0ad-54e0-4827-b316-ebe264dbf007.svg)</a>
-
-> You can either fork this repository or just use as a template. You will not get latest updates if you use this as a template. And you can only fork once. So, I will recommend this to use as a template and check for updates manually.
-
-1. Login or Sign Up to [GitHub](https://github.com/login)
-2. Use this as template or Fork.
-
-    - **Use as Template (Recommended):** just Click on `Use this template` and `Create a new Repository` or just      [Click Here](https://github.com/sanjib-sen/weblatex/generate)
-    
-    Or,
-    
-    - **Fork:** Fork this repository or just [Click Here](https://github.com/sanjib-sen/weblatex/fork)
-    
-3. Give it a name and select **Create Fork / Create repository from template**
-4. Select **<> Code** > **CodeSpaces** > **Create Codespace on Main**
-    ![tutorial](https://user-images.githubusercontent.com/54777542/224550678-32a949ae-3a9b-4e8d-a0f1-ad30ec429908.gif)
-
-5. It will start installing. **You Have to wait for 2 mins in the first time**. After that it will take 2/3 seconds to open up
-
-## Where is my PDF?
-
-Generated PDFs will be saved to **`/PDF`** directory
-
-## Editor Instructions
-
-1. Pressing `Ctrl+S` will save the document and generate PDF in the **PDF** folder
-2. To check the generated PDF click on the PDF file. However **It will take 20/30 seconds to open the preview for the first time. So, do not panic**. After that, it will generate and preview the pdf instantly.
-3. Your code will be automatically saved and the PDF will generate automatically each time you edit something
-4. You can see all the error logs in the **Terminal > Output > Latex Compiler** as well as in the Latex Workshop sidebar
-5. If it shows **Error showing PDF** or in case of any inconvenience, just reload the browser or press `Ctrl+R`
-6. **Just use it as you use Visual Studio Code**
-7. Do not delete the `devcontainer.json` file. However you can edit the properties there to customize many things!
-
-## To use with LuaLatex or any other Tex program
-
-Add this line to your main .tex file
-
-```tex
-%!TEX program = <tex_program>
+```
+make setup
 ```
 
-For example, to use **`LuaLatex`**:
+Build a development version of the document:
 
-```tex
-%!TEX program = lualatex
+```
+make [build]
 ```
 
-## GitHub Copilot
+Continuously build the development version of the document:
 
- Wonderful news, people! [GitHub Copilot](https://github.com/features/copilot) has been integrated with this tool, thanks to [@thodson-hugs](https://github.com/thodson-hugs). This program will suggest the next command, sentence and paragraph based on your document and previous writings.
+```
+make preview
+```
 
-![copilot](https://user-images.githubusercontent.com/54777542/224550711-9927d67f-e63e-445e-9ff0-db7674d7acef.gif)
+This option is great when paired with a document viewer (such as Okular) which
+automatically reloads the document on file change. This means you can keep
+writing and on save the updated document is compiled and displayed!
 
-To turn this off just **remove** or **comment out** the `"GitHub.copilot"` extension from the extensions list in `./.devcontainer/devcontainer.json` file.
+Build versions of the document for publishing:
 
-  ```json
-   "extensions": [
-        "...",
-        //"GitHub.copilot",
-        "..."
-        ]
-  ```
+```
+make print
+make ebook
+```
 
-## Grammarly
+Run linters (for now only [proselint](http://proselint.com/)) against a TeX
+file (e.g. chapter 1):
 
-This editor has built-in [Grammarly](https://www.grammarly.com/) support for `.tex` files.
+```
+make lint [texfile=chapter1.tex]
+```
 
-To disable grammarly, you can just **remove** or **comment out** the `"ms-vsliveshare.vsliveshare"` extension from the extensions list in `./.devcontainer/devcontainer.json` file.
+If you do not specify the `texfile` to lint, then all TeX files in `chapters/`
+will be linted.
 
-  ```json
-   "extensions": [
-        "...",
-        //"znck.grammarly",
-        "..."
-        ]
-  ```
+Clean the build directory:
 
-If you want to use Grammarly for other files, Go to `./.devcontainer/devcontainer.json` and add your file extension in the
+```
+make clean[all]
+```
 
-  ```json
-    "grammarly.files.include": ["*.md", ".YourFileExtension"]
-  ```
+`clean` will leave the output products (the PDFs) in place, while `cleanall`
+will remove these too. If your document is not compiling for some reason and
+you think you've already solved the problem in the LaTeX sources, maybe try a
+`cleanall` before insisting. Sometimes the underlying build programs (namely
+`latexmk`) get stuck in inconsistent temporary files.
 
-And in case you do not want to use Grammarly for other files, add your file extension in the
+## How to use the template
 
-  ```json
-    "grammarly.files.exclude": ["*.md", ".YourFileExtension"]
-  ```
+This is all great, but how can this repository be used as a starting point for
+writing your own thesis?
 
-You can use Grammarly in any file apart from `.tex` files. Just press `CTRL + SHIFT + P` and search for `Grammarly: Check text`.
+In our opinion you have mostly three options:
+- Download/clone the repository and copy *all* files to a directory of your
+  desire, for instance to inside some special folder within you own thesis
+  repository.  
+  Notice that this will not allow you to easily keep up with this template
+  should it change.
+- Fork the repository to your own and work there. If you want to include it
+  within your own thesis repository, you can use `git submodules` for this.
+- Use `git subtree` to pull this repository to your main thesis repository and
+  work directly there. Changes in your copy will be versioned by your main
+  thesis repo, while you will still be able to pull new updates from here
+  should they appear.
 
-This editor uses Grammarly Free account to check grammar and spelling. However if you want to use your Grammarly Premium account, simply press `CTRL + SHIFT + P` and search for `Grammarly: Login / Connect your account`.
+The last of these options mas be the most adquate, as it seems to be the most flexible and
+easy-to-use alternative. Here follow the main commands you will need should you
+choose to go along with this too.
+```
+$ mkdir mythesis
+$ git init .
+$ git commit --allow-empty -n -m "Initial commit."
+$ git subtree add  --prefix document https://github.com/detiuaveiro/ua-thesis-template.git master --squash;
+$ git subtree pull --prefix document https://github.com/detiuaveiro/ua-thesis-template.git master --squash;
+```
 
-## LanguageTools
+- The first line will init a new repository for your thesis
+- It will create an initial commit
+- It will pull this repository for the first time to `document`
+- The second is used for subsequent pulls.
 
-This editor has built-in [LanguageTool](https://languagetool.org) support for `BibTEX`, `ConTEXt`, `LATEX`, `Markdown`, `Org`, `reStructuredText`, `R Sweave`, and `XHTML` documents but **it is disabled by default in favor of grammarly**. If you want to use LanguageTool instead of grammarly, just **uncomment** the following lines from `.devcontainer/devcontainer.json`
+The result should be a git repository for your thesis work. In the `$DESTDIR` (e.g. `document`)
+you will have the document to edit. If you wish you can add a reference to another git repository
+to track your own changes.
 
-  ```json
-  "extensions": [
-      "...",
-      "valentjn.vscode-ltex",
-      "..."
-    ]
-  ```
-  
-  And the **remove** or **comment out** the `"znck.grammarly"` extension from the extensions list in `./.devcontainer/devcontainer.json` file. (Recommended)
+## Use as a template in github
 
-  ```json
-  "extensions": [
-      "...",
-      // "znck.grammarly",
-      "..."
-    ]
-  ```
+Please check the [github instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
+to create your own repository using this as a template.
 
-## Live Collaboration
+## Use it in [Overleaf](https://www.overleaf.com)
 
-> All about Live Collaboration: [Click Here](https://visualstudio.microsoft.com/services/live-share/)
+It is possible to use this template in overleaf.
 
-Just click on the **Live Share** Sidebar button and you are good to go
+To enable it:
 
-![collaborate](https://user-images.githubusercontent.com/54777542/224550768-48997ac9-8747-425b-b7b4-05473f3ba944.png)
+- in `matter.tex` change `\def\useoverleaf{0}`to 1
+- add `fc-portuges.def` to the project the file be can found in [here](http://mirrors.ctan.org/install/macros/latex/contrib/fmtcount.tds.zip) 
+- change the main document to `matter.tex`
 
-If you do not need the Live Collaboration at all, you can just **remove** or **comment out** the `"ms-vsliveshare.vsliveshare"` extension from the extensions list in `./.devcontainer/devcontainer.json` file.
+## Dependencies
 
-  ```json
-  "extensions": [
-      "...",
-      // "ms-vsliveshare.vsliveshare",
-      "..."
-    ]
-  ```
+- A TeX distribution: TeX Live or MacTeX
+- gs (for `make print`, `make ebook` and `simplify-colors.sh`)
+- pandoc (for `make lint`)
+- imagemagick and poppler (for `simplify-colors.sh`)
+- pygments (for minted)
 
-## PDF Viewer Dark Mode
+As for pygments and proselint, those can by installed with pip by issuing `pip
+install -r requirements.txt` at the root of this repository.
 
-The pdf viewer will preview the pdf in Dark Mode by default if your Operating System is in Dark Mode. To view the pdf in Normal mode in os-wide dark mode just **remove or comment** these lines from `./.devcontainer/devcontainer.json`.
+On Ubuntu relatives the following dependencies, installable with `apt` may
+also be required
+- biber
+- texlive-bibtex-extra
+- texlive-latex-extra
+- texlive-science
 
-  ```json
-    //"latex-workshop.view.pdf.color.dark.pageColorsBackground":"#171717",
-    //"latex-workshop.view.pdf.color.dark.pageColorsForeground":"#FFFFFF",
-    //"latex-workshop.view.pdf.color.dark.backgroundColor":"#171717",
-  ```
+These endorsed dependencies which may or may not come with the TeX Live package
+distributed with your Linux distribution.
 
-## Configuration
+Usually TeX Live is split into a minimal package and a `texlive-extra` which is
+filled with the remainder of TeX Live, be it fonts, styles, language support,
+and so on. So, if a LaTeX dependency is missing on your installation, do verify
+that you are not missing one of these packages.
 
-- To change the output directory change the following properties in `./.devcontainer/devcontainer.json`
+## Authors
 
-    ```json
-    "latex-workshop.latex.outDir": "<YourDirectoryName>",
-    "latex-workshop.latex.magic.args": ["-output-directory=<YourDirectoryName>"],
-    ```
+Tomás Oliveira e Silva created the [original
+template](http://sweet.ua.pt/tos/TeX/ua_thesis.tgz) which was later picked up
+by João Paulo Barraca who [improved and maintained it for
+years](http://code.ua.pt//projects/latex-ua/repository).
 
-- Other configurations (e.g. PDF Generation Delay, Auto Saving etc.) can be modified in `./.devcontainer/devcontainer.json`. Check the [Wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki)
-
-## More Features and Configurations
-
-There are a lot of features like
-
-- [Intellisense (Citation, References)](https://github.com/James-Yu/LaTeX-Workshop/wiki/Intellisense)
-- [Snippet and Shortcuts](https://github.com/James-Yu/LaTeX-Workshop/wiki/Snippets)
-- [Linting](https://github.com/James-Yu/LaTeX-Workshop/wiki/Linters)
-- [Formatting](https://github.com/James-Yu/LaTeX-Workshop/wiki/Format)
-- [Code Folding](https://github.com/James-Yu/LaTeX-Workshop/wiki/ExtraFeatures#code-folding)
-
-And a lot [more](https://github.com/James-Yu/LaTeX-Workshop/wiki/ExtraFeatures).
-
-All of the features and configurations can be found [here](https://github.com/James-Yu/LaTeX-Workshop/wiki).
-
-## Contribution
-
-I am open to and request you to contribute to this project. You can just Create a new issue to let me know about your concern/requests or just send a pull request with your desired changes.
-
-## Credits
-
-- @James-Yu's [latex-workshop](https://github.com/James-Yu/LaTeX-Workshop) For all the Latex support.
-- [danteev/texlive](https://github.com/dante-ev/docker-texlive) For Latex compilation.
-- @znck's [Grammarly](https://github.com/znck/grammarly) for Grammarly support.
-- [@thodson-hugs](https://github.com/thodson-hugs) for GitHub Copilot
-
-## What's Next
-
-1. Will optimize the backend to decrease installation time and PDF showing time for the first time
-2. Documentation
-3. Release: Export PDF as a release version
-4. You tell me
-
-## Contact
-
-1. Send an email to `mail@sanjibsen.com`
-2. [Facebook](https://www.facebook.com/sanjib.kumarsen.963/), [LinkedIn](https://www.linkedin.com/in/sanjibsen/)
+This is a fork by Fábio Maia and Ricardo Jesus who wanted to further improve
+the template and setup a clean environment and workflow for writing their MSc
+thesis.

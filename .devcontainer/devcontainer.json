@@ -5,6 +5,8 @@
 	"image": "sanjibsen/weblatex:latest", // https://github.com/sanjib-sen/weblatex-docker
 	"remoteUser": "root", // Do not change this
 	"features": {},
+	// Install additional dependencies for UA thesis template
+	"postCreateCommand": "pip install pygments proselint && apt-get update && apt-get install -y ghostscript imagemagick poppler-utils lacheck chktex pandoc latexmk biber texlive-lang-portuguese || true",
 	"customizations": {
 		"vscode": {
 			"settings": {
@@ -38,14 +40,15 @@
 					"*.run.xml" // Added Manually
 				],
 				// Edit the following property to change export directory
-				"latex-workshop.latex.outDir": "./PDF",
+				"latex-workshop.latex.outDir": "./build",
 				"latex-workshop.latex.autoClean.run": "onBuilt",
 				"latex-workshop.latex.build.forceRecipeUsage": false,
 				"latex-workshop.synctex.afterBuild.enabled": true,
 				"latex-workshop.view.pdf.viewer": "tab",
 				"latex-workshop.latex.clean.subfolder.enabled": true,
 				"latex-workshop.latex.magic.args": [
-					"-output-directory=PDF", // to change the output directory
+					"-output-directory=build", // to change the output directory
+					"-shell-escape", // Required for minted package
 					"%DOC%"
 				],
 				// Remove / comment the next 3 lines to remove dark view for pdf
@@ -68,6 +71,62 @@
 					{
 						"language": "latex",
 						"scheme": "file"
+					}
+				],
+				// LaTeX compilation tools for UA thesis template
+				"latex-workshop.latex.tools": [
+					{
+						"name": "latexmk",
+						"command": "latexmk",
+						"args": [
+							"-pdf",
+							"-file-line-error",
+							"-halt-on-error",
+							"-interaction=nonstopmode",
+							"-shell-escape",
+							"-auxdir=build",
+							"-outdir=build",
+							"%DOC%"
+						],
+						"env": {}
+					},
+					{
+						"name": "pdflatex",
+						"command": "pdflatex",
+						"args": [
+							"-file-line-error",
+							"-interaction=nonstopmode",
+							"-shell-escape",
+							"-output-directory=build",
+							"%DOC%"
+						],
+						"env": {}
+					},
+					{
+						"name": "biber",
+						"command": "biber",
+						"args": [
+							"build/%DOCFILE%"
+						],
+						"env": {}
+					}
+				],
+				// Compilation recipes
+				"latex-workshop.latex.recipes": [
+					{
+						"name": "latexmk (UA thesis)",
+						"tools": [
+							"latexmk"
+						]
+					},
+					{
+						"name": "pdflatex ➞ biber ➞ pdflatex × 2",
+						"tools": [
+							"pdflatex",
+							"biber",
+							"pdflatex",
+							"pdflatex"
+						]
 					}
 				]
 			},
