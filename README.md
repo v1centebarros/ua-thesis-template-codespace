@@ -47,12 +47,19 @@ Traditional LaTeX platforms like Overleaf have limitations:
 ### With This Template You Get:
 
 ✅ **Full Git Integration** - Complete version control, branches, commits, and history
+
 ✅ **VSCode Power** - All your favorite extensions, themes, and keybindings
+
 ✅ **AI Assistance** - GitHub Copilot suggests LaTeX commands and content
+
 ✅ **Grammar Checking** - Built-in Grammarly or LanguageTool support
+
 ✅ **Real-time Collaboration** - Unlimited collaborators with Live Share
+
 ✅ **Mobile Access** - Edit your thesis from any device, including tablets
+
 ✅ **Automatic Builds** - PDF generated on every save (Ctrl+S)
+
 ✅ **No Installation** - Runs entirely in the browser
 
 ## Installation Instructions
